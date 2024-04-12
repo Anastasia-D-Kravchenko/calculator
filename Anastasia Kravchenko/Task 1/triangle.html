@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор трикутника</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="backs">Повернутися</div>
+    <form>
+         <h2>Програма для трикутника</h2>
+        Введіть довжину першої сторони: <input type="number" id="a" min=1 required>см<br><br>
+            Введіть довжину другої сторони: <input type="number" id="b" min=1 required>см<br><br>
+            Введіть довжину третьої сторони: <input type="number" id="c" min=1 required>см<br><br>
+            <input type="button" value="Розрахувати" onclick="rez()">
+           
+        <hr color="#b27866">
+            <div id="textarea"></div>
+          </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    function rez() {
+      a = parseFloat(document.getElementById("a").value);
+      b = parseFloat(document.getElementById("b").value);
+      c = parseFloat(document.getElementById("c").value);
+      p = (a + b + c) / 2;
+      perimeter = p;
+        area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        area = area.toFixed(2);
+        perimeter = a + b + c;
+        perimeter = perimeter.toFixed(2);
+        inscribedRadius = Math.sqrt(((p - a) * (p - b) * (p - c)) / p);
+        inscribedRadius = inscribedRadius.toFixed(2);
+        circumscribedRadius = (a * b * c) / (4 * Math.sqrt(p * (p - a) * (p - b) * (p - c)));
+        circumscribedRadius = circumscribedRadius.toFixed(2);
+        document.getElementById("textarea").innerHTML = "Трикутник: " + "<br>" +
+            "Площа: " + area + " см²" + "<br>" +
+            "Периметр: " + perimeter + " см" + "<br>" +
+            "Радіус вписаного кола: " + inscribedRadius + " см" + "<br>" +
+            "Радіус описаного кола: " + circumscribedRadius + " см";
+    }
+    $("#backs").click(function() {
+        $(location).attr('href', 'start_here.html');
+    });
+</script>
+
+</html>

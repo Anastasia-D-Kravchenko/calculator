@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+    
+	<head>
+		<title>Програма помічник</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link href="lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+        <link href="css/reset.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+    <body>
+        <div class="container">
+        
+            <h1>Програма помічник</h1>
+
+            <div id="gallery">
+
+                <figure class="photo">
+                    <img src="images/circle.png" alt="Eagle" id="circle-image" /></a>
+                    <figcaption>Коло</figcaption>
+                </figure>
+                <figure class="photo">
+                    <img src="images/rectangle.png" alt="Pasta" id="rectangle-image" /></a>
+                    <figcaption>Прямокутник</figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <img src="images/square.png" alt="Squash" id="square-image" /></a>
+                    <figcaption>Квадрат</figcaption>
+                </figure>
+
+                <figure class="photo">
+                    <img src="images/triangle.png" alt="Hills" id="triangle-image" /></a>
+                    <figcaption>Трикутник</figcaption>
+                </figure>
+            </div>
+        </div>
+        <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
+        <script>
+            const circleImage = document.getElementById("circle-image");
+            const rectangleImage = document.getElementById("rectangle-image");
+            const squareImage = document.getElementById("square-image");
+            const triangleImage = document.getElementById("triangle-image");
+          
+            circleImage.addEventListener("click", () => {
+              const fileURL = new URL("сircle.html", window.location.href);
+              window.open(fileURL.toString(), "_self");
+            });
+            rectangleImage.addEventListener("click", () => {
+              const fileURL = new URL("rectangle.html", window.location.href);
+              window.open(fileURL.toString(), "_self");
+            });
+            squareImage.addEventListener("click", () => {
+              const fileURL = new URL("square.html", window.location.href);
+              window.open(fileURL.toString(), "_self");
+            });
+            triangleImage.addEventListener("click", () => {
+              const fileURL = new URL("triangle.html", window.location.href);
+              window.open(fileURL.toString(), "_self");
+            });
+          </script>
+    </body>
+</html>

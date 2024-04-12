@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     
+    <meta charset="UTF-8">
+      <title>Калькулятор кола</title>
+     
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="backs">Повернутися</div>
+      <form>
+            <h2>Програма для кола</h2>
+            Введіть довжину радіуса: <input type="number" id="r" min=1 required>см<br><br>
+            <input type="button" value="Розрахувати" onclick="rez()">
+           
+        <hr color="#b27866">
+            <div id="textarea"></div>
+          </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    function rez() {
+        r = document.getElementById("r").value;
+        area = Math.PI * r * r;
+        area = area.toFixed(2);
+        diameter = 2 * r;
+        diameter = diameter.toFixed(2);
+        length = 2 * Math.PI * r;
+        length = length.toFixed(2);
+        document.getElementById("textarea").innerHTML = "Коло: " + "<br>" +
+            "Площа: " + area + " см²" + "<br>" +
+            "Діаметр: " + diameter + " см" + "<br>" +
+            "Довжина дуги кола: " + length + " см";
+    }
+    $("#backs").click(function() {
+        $(location).attr('href', 'start_here.html');
+    });
+</script>
+
+</html>

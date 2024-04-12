@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <title>Калькулятор квадрата</title>
+     
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="backs">Повернутися</div>
+      <form>
+            <h2>Програма для квадрата</h2>
+            Введіть довжину сторони: <input type="number" id="a" min=1 required>см<br><br>
+            <input type="button" value="Розрахувати" onclick="rez()">
+           
+        <hr color="#b27866">
+            <div id="textarea"></div>
+          </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    function rez() {
+        a = document.getElementById("a").value;
+        area = a * a;
+        area = area.toFixed(2);
+        perimeter = 4 * a;
+        perimeter = perimeter.toFixed(2);
+        diagonal = a * Math.sqrt(2);
+        diagonal = diagonal.toFixed(2);
+        inscribedRadius = a / 2;
+        inscribedRadius = inscribedRadius.toFixed(2);
+        circumscribedRadius = a * (Math.sqrt(2) / 2);
+        circumscribedRadius = circumscribedRadius.toFixed(2);
+        document.getElementById("textarea").innerHTML = "Квадрат: " + "<br>" +
+            "Площа: " + area + " см²" + "<br>" +
+            "Периметр: " + perimeter + " см" + "<br>" +
+            "Діагональ: " + diagonal + " см" + "<br>" +
+            "Радіус вписаного кола: " + inscribedRadius + " см" + "<br>" +
+            "Радіус описаного кола: " + circumscribedRadius + " см";
+    }
+    $("#backs").click(function() {
+        $(location).attr('href', 'start_here.html');
+    });
+</script>
+
+</html>

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #C4B59F;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  form {
+    border: 2px solid #9D513D;
+    padding: 20px;
+    color: #9D513D;
+    width: 472px;
+    background: #F3EFE3;
+    box-shadow: -6px 12px 11px 3px #8d8272;
+  }
+  
+  input {
+    padding: 5px;
+    margin: 0.5rem;
+    margin-top: 1rem;
+    color: white;
+    width: 150px;
+    margin-bottom: 10px;
+    background: #D5AD7D;
+    border: 2px solid #9D513D;
+  }
+  
+  #textarea {
+    border: 1px solid #9D513D;
+    padding: 10px;
+    margin-top: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #0073b7;
+    color: white;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #005997;
+  }
+  #backs{
+    position: fixed;
+    top: 7px;
+    left: 10px;
+    font-weight: 600;
+    color: #f3efe3;
+    border: 3px solid #9d513d;
+    background: #d5ad7dc4;
+    width: 10%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition-duration: .7s;
+    border-radius: 50%;
+    z-index: 11;
+    animation: 4s ease-in-out 0s infinite normal none running fly0;
+  }
+#backs:hover{
+    border: 3px solid #8a7651;
+    color: #9d513d;
+    background: none;
+}
+@keyframes fly0 {
+  0% {transform: translatey(0px);}
+  50% {transform: translatey(-10px);}
+  100% {transform: translatey(0px);}
+}
