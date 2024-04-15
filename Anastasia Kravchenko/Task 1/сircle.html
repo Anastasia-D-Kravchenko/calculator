@@ -4,17 +4,17 @@
 <head>
      
     <meta charset="UTF-8">
-      <title>Калькулятор кола</title>
+      <title>Circle calculator</title>
      
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div id="backs">Повернутися</div>
+    <div id="backs">Return</div>
       <form>
-            <h2>Програма для кола</h2>
-            Введіть довжину радіуса: <input type="number" id="r" min=1 required>см<br><br>
-            <input type="button" value="Розрахувати" onclick="rez()">
+            <h2>Program for the circle</h2>
+            Enter the length of the radius: <input type="number" id="r" min=1 required>cm<br><br>
+            <input type="button" value="Calculate" onclick="rez()">
            
         <hr color="#b27866">
             <div id="textarea"></div>
@@ -30,10 +30,10 @@
         diameter = diameter.toFixed(2);
         length = 2 * Math.PI * r;
         length = length.toFixed(2);
-        document.getElementById("textarea").innerHTML = "Коло: " + "<br>" +
-            "Площа: " + area + " см²" + "<br>" +
-            "Діаметр: " + diameter + " см" + "<br>" +
-            "Довжина дуги кола: " + length + " см";
+        document.getElementById("textarea").innerHTML = "Circle: " + "<br>" +
+            "Area: " + area + " cm²" + "<br>" +
+            "Diameter: " + diameter + " cm" + "<br>" +
+            "Arc length of the circle: " + length + " cm";
     }
     $("#backs").click(function() {
         $(location).attr('href', 'start_here.html');

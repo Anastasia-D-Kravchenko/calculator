@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-      <title>Калькулятор прямокутника</title>
+      <title>Rectangle calculator</title>
      
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div id="backs">Повернутися</div>
+    <div id="backs">Return</div>
       <form>
-            <h2>Програма для прямокутника</h2>
-            Введіть довжину першої сторони: <input type="number" id="a" min=1 required>см<br><br>
-            Введіть довжину другої сторони: <input type="number" id="b" min=1 required>см<br><br>
-            <input type="button" value="Розрахувати" onclick="rez()">
+            <h2>Program for a rectangle</h2>
+            Enter the length of the first side: <input type="number" id="a" min=1 required>cm<br><br>
+            Enter the length of the other side: <input type="number" id="b" min=1 required>cm<br><br>
+            <input type="button" value="Calculate" onclick="rez()">
            
         <hr color="#b27866">
             <div id="textarea"></div>
@@ -36,11 +36,11 @@
         beta = Math.atan(a / b);
         beta = beta.toFixed(2);
         document.getElementById("textarea").innerHTML = "Прямокутник: " + "<br>" +
-            "Площа: " + area + " см²" + "<br>" +
-            "Периметр: " + perimeter + " см" + "<br>" +
-            "Діагональ: " + diagonal + " см" + "<br>" +
-            "Кут α між діагоналями: " + alpha + " рад" + "<br>" +
-            "Кут β між діагоналями: " + beta + " рад";
+            "Area: " + area + " cm²" + "<br>" +
+            "Perimeter: " + perimeter + " cm" + "<br>" +
+            "Diagonal: " + diagonal + " cm" + "<br>" +
+            "Angle α between the diagonals: " + alpha + " rads" + "<br>" +
+            "The angle β between the diagonals: " + beta + " rads";
     }
     $("#backs").click(function() {
         $(location).attr('href', 'start_here.html');

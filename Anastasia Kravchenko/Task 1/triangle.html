@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Калькулятор трикутника</title>
+    <title>Triangle calculator</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div id="backs">Повернутися</div>
+    <div id="backs">Return</div>
     <form>
-         <h2>Програма для трикутника</h2>
-        Введіть довжину першої сторони: <input type="number" id="a" min=1 required>см<br><br>
-            Введіть довжину другої сторони: <input type="number" id="b" min=1 required>см<br><br>
-            Введіть довжину третьої сторони: <input type="number" id="c" min=1 required>см<br><br>
-            <input type="button" value="Розрахувати" onclick="rez()">
+         <h2>Program for a triangle</h2>
+        Enter the length of the first side: <input type="number" id="a" min=1 required>cm<br><br>
+        Enter the length of the other side: <input type="number" id="b" min=1 required>cm<br><br>
+        Enter the length of the third party: <input type="number" id="c" min=1 required>cm<br><br>
+            <input type="button" value="Calculate" onclick="rez()">
            
         <hr color="#b27866">
             <div id="textarea"></div>
@@ -36,11 +36,11 @@
         inscribedRadius = inscribedRadius.toFixed(2);
         circumscribedRadius = (a * b * c) / (4 * Math.sqrt(p * (p - a) * (p - b) * (p - c)));
         circumscribedRadius = circumscribedRadius.toFixed(2);
-        document.getElementById("textarea").innerHTML = "Трикутник: " + "<br>" +
-            "Площа: " + area + " см²" + "<br>" +
-            "Периметр: " + perimeter + " см" + "<br>" +
-            "Радіус вписаного кола: " + inscribedRadius + " см" + "<br>" +
-            "Радіус описаного кола: " + circumscribedRadius + " см";
+        document.getElementById("textarea").innerHTML = "Triangle: " + "<br>" +
+            "Area: " + area + " cm²" + "<br>" +
+            "Perimeter: " + perimeter + " cm" + "<br>" +
+            "Radius of the inscribed circle: " + inscribedRadius + " cm" + "<br>" +
+            "Radius of the described circle: " + circumscribedRadius + " cm";
     }
     $("#backs").click(function() {
         $(location).attr('href', 'start_here.html');
